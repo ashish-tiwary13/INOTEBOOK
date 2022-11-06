@@ -10,6 +10,7 @@ function NavBar() {
     e.preventDefault();
     localStorage.removeItem('token');
     Navigate('/login');
+    // eslint-disable-next-line
   },[])
   useEffect(() => {
     setDisplay(!localStorage.getItem('token')?"block":"none")
