@@ -48,6 +48,7 @@ const NoteState = (props) => {
       },
 
     });
+    // eslint-disable-next-line
     const json = response.json();
     // console.log(json)
     // 
@@ -66,6 +67,7 @@ const NoteState = (props) => {
 
       body: JSON.stringify({title,description,tag})
     });
+    // eslint-disable-next-line
     const json = response.json();
     // console.log(json)
     // Logic to edit in client
