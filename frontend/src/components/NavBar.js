@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useCallback} from "react";
+import React,{useState,useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -6,12 +6,13 @@ function NavBar() {
   const [displayforlogout, setDisplayforlogout] = useState("block");
 
   let Navigate = useNavigate();
-  const handleOnChange = useCallback((e)=>{
+  // eslint-disable-next-line
+  const handleOnChange = (e)=>{
     e.preventDefault();
     localStorage.removeItem('token');
     Navigate('/login');
-    // eslint-disable-next-line
-  },[])
+  }
+  
   useEffect(() => {
     setDisplay(!localStorage.getItem('token')?"block":"none")
     setDisplayforlogout(!localStorage.getItem('token')?"none":"block")
