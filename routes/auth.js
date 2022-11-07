@@ -115,7 +115,7 @@ router.post('/getuser', fetchuser , async (req,res)=>{
 
 
 
-    module.exports = router
+    module.exports = router;
     
     
 

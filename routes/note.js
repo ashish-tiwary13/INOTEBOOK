@@ -93,4 +93,4 @@ router.delete('/deletenote/:id', fetchuser , async (req,res)=>{
 
 
 
-module.exports = router
+module.exports = router;
