@@ -1,13 +1,15 @@
 import React,{useState} from "react";
 import {useNavigate} from 'react-router-dom'
 
+const port = 5000 || process.env.PORT;
+
 const Signup = () => {
     const [credentials, setCredentials] = useState({name:"",email:"",password:"",cpassword:""})
     let navigate = useNavigate();
     const onSubmit= async(e)=>{
         e.preventDefault();
         const {name,email,password} =credentials;
-        const response = await fetch("http://localhost:5000/api/auth/createUser", {
+        const response = await fetch(`http://localhost:${port}/api/auth/createUser`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
@@ -15,7 +17,7 @@ const Signup = () => {
               body: JSON.stringify({name,email,password})
         });
         const json = await response.json();
-        // console.log(json)
+        // console.log(port)
         if(json.success){
           // save the auth token and redirect
           localStorage.setItem('token',json.authtoken);
