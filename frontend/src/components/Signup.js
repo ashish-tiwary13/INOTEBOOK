@@ -4,7 +4,8 @@ import {useNavigate} from 'react-router-dom'
 const port = 5000 || process.env.PORT;
 
 const Signup = () => {
-    const host=`http://localhost:${port}` || `https://inotebook-lac.vercel.app`;
+  // `http://localhost:${port}` || 
+    const host=`https://inotebook-lac.vercel.app`;
     const [credentials, setCredentials] = useState({name:"",email:"",password:"",cpassword:""})
     let navigate = useNavigate();
     const onSubmit= async(e)=>{
