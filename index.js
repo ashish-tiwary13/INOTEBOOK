@@ -3,7 +3,7 @@ connectTOMongo();
 
 const express = require('express')
 const app = express()
-const port = 5000 || process.env.PORT
+const port = 5000 || process.env.PORT;
 //  cors policy
 var cors = require('cors')
 app.use(cors())
