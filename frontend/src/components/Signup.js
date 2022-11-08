@@ -5,13 +5,13 @@ const port = 5000 || process.env.PORT;
 
 const Signup = () => {
   // `http://localhost:${port}` || 
-    const host=`https://inotebook-lac.vercel.app`;
+    // const host=`https://inotebook-lac.vercel.app`;
     const [credentials, setCredentials] = useState({name:"",email:"",password:"",cpassword:""})
     let navigate = useNavigate();
     const onSubmit= async(e)=>{
         e.preventDefault();
         const {name,email,password} =credentials;
-        const response = await fetch(`${host}/api/auth/createUser`, {
+        const response = await fetch(`/api/auth/createUser`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
