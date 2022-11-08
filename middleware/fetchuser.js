@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 
 
+const {JWT_SECRET}= require('../config/keys')
+
 const fetchuser = (req,res,next)=>{
     // get the user from the jwt token and add id to req object
     const authToken = req.header('auth-token');
@@ -10,7 +12,7 @@ const fetchuser = (req,res,next)=>{
         res.status(401).send({error: "Please authenticate using a valid token"})
     }
     try {
-        const decoded = jwt.verify(authToken, 'sdfhbskjfdvn');
+        const decoded = jwt.verify(authToken, JWT_SECRET);
         req.user = decoded.user;
         next();
     }

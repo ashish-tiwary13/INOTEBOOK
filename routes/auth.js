@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 
+const {JWT_SECRET}= require('../config/keys')
 //  ROUTE 1: create  a user using : POST "/api/auth/createUser". Donesn't reqiure Login
 router.post('/createUser',
 [
@@ -42,7 +43,7 @@ async (req,res)=>{
         }
     }
     success=true;
-    const authToken = jwt.sign(data , 'sdfhbskjfdvn');
+    const authToken = jwt.sign(data , JWT_SECRET);
     res.json({success,authToken});
     // console.log({authToken});
     //Catch errors
@@ -86,7 +87,7 @@ router.post('/login',[
             }
         }
         success=true;
-        const authToken = jwt.sign(data , 'sdfhbskjfdvn');
+        const authToken = jwt.sign(data , JWT_SECRET);
         res.json({success,authToken});
         // console.log({authToken});
     //Catch errors

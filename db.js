@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const mongoURI ="mongodb://localhost:27017/inotebook"
+const {MOGOURI} = require('./config/keys')
 
 const connectTOMongo = ()=> {
-    mongoose.connect(mongoURI,()=>{
+    mongoose.connect(MOGOURI,()=>{
         console.log("connected to Mongo successfuly")
     })
 }
