@@ -12,7 +12,8 @@ app.use(cors())
 //   res.send('Hello World!')
 // })
 
-
+const dotenv= require('./env');
+dotenv.config();
 //
 app.use(express.json())
 
