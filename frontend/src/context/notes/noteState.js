@@ -5,7 +5,8 @@ import NoteContext from "./noteContext";
 const port = 5000 || process.env.PORT;
 
 const NoteState = (props) => {
-  const host=`http://localhost:${port}` || `https://inotebook-lac.vercel.app`;
+  // `http://localhost:${port}` || 
+  const host=`https://inotebook-lac.vercel.app`;
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
 
