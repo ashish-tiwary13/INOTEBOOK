@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {URL} from '../config/keys'
 
-const port = 5000 || process.env.PORT;
 
 const Login = () => {
   
-  const host=`http://localhost:${port}`;
+  const host=URL;
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate();
   const onSubmit = async (e) => {

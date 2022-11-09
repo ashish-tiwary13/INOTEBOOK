@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import NoteContext from "./noteContext";
+import {URL} from '../../config/keys'
 
 
-const port = 5000 || process.env.PORT;
 
 const NoteState = (props) => {
-  const host=`http://localhost:${port}`;
+  const host=URL;
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
 

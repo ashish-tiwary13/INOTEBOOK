@@ -1,10 +1,9 @@
 import React,{useState} from "react";
 import {useNavigate} from 'react-router-dom'
-
-const port = 5000 || process.env.PORT;
+import {URL} from '../config/keys'
 
 const Signup = () => {
-    const host=`http://localhost:${port}`;
+    const host=URL;
     const [credentials, setCredentials] = useState({name:"",email:"",password:"",cpassword:""})
     let navigate = useNavigate();
     const onSubmit= async(e)=>{
