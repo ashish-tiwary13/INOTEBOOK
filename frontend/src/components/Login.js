@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import {URL} from '../config/keys'
+import {URL} from '../config/keys'
 
 
 const Login = () => {
   
-  // const host=URL;
+  const host=URL;
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate();
   const onSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`/api/auth/login`, {
+    const response = await fetch(`${host}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
