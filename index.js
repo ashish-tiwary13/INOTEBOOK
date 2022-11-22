@@ -38,7 +38,7 @@
 
 
 
-import 'ignore-styles'
+require('ignore-styles')
 
 require('@babel/register')({
   ignore: [/(node_modules)/],
