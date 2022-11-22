@@ -20,7 +20,7 @@ app.use('/api/note', require('./routes/note'))
 //
 import fs from 'fs'
 import ReactDOMServer from "react-dom/server";
-import App from '../backend/frontend/src/App'
+import App from '../backend/frontend/src/App.js'
  const serverRenderer = (req, res, next)=>{
     fs.readFile(path.resolve('./frontend/build/index.html'), 'utf-8', (err,data)=>{
         if(err){
