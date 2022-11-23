@@ -19,7 +19,7 @@ import App from './App';
 
 const root = hydrateRoot(document.getElementById('root'),<App />);
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
