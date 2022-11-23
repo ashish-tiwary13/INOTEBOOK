@@ -19,6 +19,7 @@ app.use('/api/note', require('./routes/note'))
 
 //
 import fs from 'fs'
+import React from 'react'
 import ReactDOMServer from "react-dom/server";
 const App = require('./frontend/src/App');
  const serverRenderer = (req, res, next)=>{
