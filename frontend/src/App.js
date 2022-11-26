@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NoteState from "./context/notes/noteState";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import React from 'react';
+
 
 function App() {
   return (
